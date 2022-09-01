@@ -5,7 +5,7 @@ class Usuario(models.Model):
     apellido = models.CharField(max_length=30)
     email = models.EmailField(unique=True)
 
-class Estadia(models.Model):
+class Vuelos(models.Model):
     destino = models.CharField(max_length=40)
     fecha_salida = models.DateField()
     fecha_regreso = models.DateField()
