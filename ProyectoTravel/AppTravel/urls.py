@@ -4,5 +4,6 @@ from AppTravel.views import *
 
 urlpatterns = [
     path('', inicio, name='AppTravelInicio'),
+    path('vuelos/',vuelo, name='AppTravelVuelos'),
 
 ]
