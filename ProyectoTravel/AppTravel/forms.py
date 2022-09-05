@@ -19,3 +19,5 @@ class ReservaHotel(forms.Form):
     num_personas = forms.IntegerField()
     dia_entrada = forms.DateField()
     dia_salida = forms.DateField()
+
+    
