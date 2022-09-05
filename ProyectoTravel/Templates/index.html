@@ -5,10 +5,11 @@
     {% load static %}
 
     <meta charset="utf-8">
+    {% block titulo %}
     <title>TRAVELER</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="Free HTML Templates" name="keywords">
-    <meta content="Free HTML Templates" name="description">
+    {% endblock %}
+
 
     <!-- Favicon -->
     <link href="{% static 'img/favicon.ico' %}" rel="icon">
@@ -20,9 +21,7 @@
     <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
 
-    <!-- Libraries Stylesheet -->
-    <link href="{% static 'lib/owlcarousel/assets/owl.carousel.min.css' %}" rel="stylesheet">
-    <link href="{% static 'lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css' %}" rel="stylesheet" />
+
 
     <!-- Customized Bootstrap Stylesheet -->
     <link href="{% static 'css/style.css' %}" rel="stylesheet">
@@ -44,15 +43,16 @@
                 <div class="col-lg-5">
                     <div class="card border-0">
                         <div class="card-header bg-primary text-center p-4">
-                            <h1 class="text-white m-0">Sign Up Now</h1>
+                            <h1 class="text-white m-0">Inicio de Sesion</h1>
                         </div>
                         <div class="card-body rounded-bottom bg-white p-5">
-                            <form action="" method="POST">
+                            <form action="" method="POST"  >
                             {% csrf_token %}
-                            
-                                {{ form.as_p }}
-                            
-                                <input type="submit" value="Enviar">
+                               
+                                    {{ form.as_p}} 
+                               
+                                
+                                <input class="btn btn-primary btn-block" type="submit" style="height: 40px; margin-top: 10px;" value="Enviar">
                             
                             </form>  
                         </div>
@@ -64,17 +64,7 @@
     
     
     {% endblock %}
-
-            
-            
-        
-   
-
-
-
-
-
-    
+  
 
     
     <!-- Footer Start -->
@@ -105,10 +95,6 @@
     <!-- Footer End -->
 
 
-    <!-- Back to Top -->
-    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="fa fa-angle-double-up"></i></a>
-
-
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
@@ -117,10 +103,6 @@
     <script src="{% static 'lib/tempusdominus/js/moment.min.js' %}"></script>
     <script src="{% static 'lib/tempusdominus/js/moment-timezone.min.js' %}"></script>
     <script src="{% static 'lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js' %}"></script>
-
-    <!-- Contact Javascript File -->
-    <script src="{% static 'mail/jqBootstrapValidation.min.js' %}"></script>
-    <script src="{% static 'mail/contact.js' %}"></script>
 
     <!-- Template Javascript -->
     <script src="{% static 'js/main.js' %}"></script>
