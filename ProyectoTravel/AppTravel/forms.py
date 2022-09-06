@@ -1,6 +1,4 @@
-from dataclasses import dataclass
-from socket import fromshare
-from xml.etree.ElementTree import fromstring
+
 from django import forms
 
 class CreacionUsuarios(forms.Form):
@@ -20,4 +18,5 @@ class ReservaHotel(forms.Form):
     dia_entrada = forms.DateField()
     dia_salida = forms.DateField()
 
-    
+class BusquedaUsuarios(forms.Form):
+    email = forms.EmailField()

@@ -7,7 +7,7 @@
 {% block inicio %}
 
 <form action="" method="POST" >
-{% csrf_token %}
+    {% csrf_token %}
                                 
     <div class="container-fluid booking mt-5 pb-5">
         <div class="container pb-5">
@@ -24,8 +24,8 @@
                             <div class="col-md-3">
                                 <div class="mb-3 mb-md-0">
                                     
-                                       Numero de Personas
-                                       {{ form.num_personas }}
+                                    Numero de Personas
+                                    {{ form.num_personas }}
                                     
                                 </div>
                             </div>
@@ -38,7 +38,7 @@
                             <div class="col-md-3">
                                 <div class="mb-3 mb-md-0">
                                     Dia de Salida al Hotel
-                                    {{ form.dia_entrada }}
+                                    {{ form.dia_salida }}
                                     
                                 </div>
                             </div>

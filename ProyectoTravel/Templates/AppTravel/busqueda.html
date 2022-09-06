@@ -1,0 +1,29 @@
+{% extends 'index.html' %}
+
+{% block titulo %}
+<title>TRAVELER - Busqueda</title>
+{% endblock %}
+
+{% block inicio %}
+
+    
+    <div class="container py-5">
+        <div class="row align-items-center">
+            <div class="col-lg-12">
+                <div class="card border-0">
+                    Busque el Usuario por su Email:
+                    <form action="/AppTravel/busqueda_post" method="GET"  >
+                    {% csrf_token %}
+                       
+                            {{ formusu.as_p}} 
+                            <input  type="submit"  value="Buscar">
+                    </form> 
+
+                </div>       
+            </div>
+        </div>
+    </div>
+
+
+
+{% endblock %}

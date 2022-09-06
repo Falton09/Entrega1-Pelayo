@@ -5,6 +5,9 @@ class Usuario(models.Model):
     apellido = models.CharField(max_length=30)
     email = models.EmailField(unique=True)
 
+    def __str__(self):
+        return f"Usuario: {self.nombre}, apellido: {self.apellido}"
+
 class Vuelos(models.Model):
     destino = models.CharField(max_length=40)
     fecha_salida = models.DateField()

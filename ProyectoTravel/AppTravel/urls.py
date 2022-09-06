@@ -5,6 +5,8 @@ from AppTravel.views import *
 urlpatterns = [
     path('', inicio, name='AppTravelInicio'),
     path('vuelos/',vuelo, name='AppTravelVuelos'),
-    path('Reservahotel/',reserva_hotel, name='AppTravelReservaHotel'),
+    path('reservahotel/',reserva_hotel, name='AppTravelReservaHotel'),
+    path('busqueda/',busqueda, name='AppTravelBusqueda'),
+    path('busqueda_post/',busqueda_post, name='AppTravelBusquedaPost'),
 
 ]
