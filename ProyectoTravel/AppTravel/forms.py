@@ -20,3 +20,10 @@ class ReservaHotel(forms.Form):
 
 class BusquedaUsuarios(forms.Form):
     email = forms.EmailField()
+
+class BusquedaVuelos(forms.Form):
+    destino = forms.CharField(max_length=40)
+    
+
+class BusquedaResevas(forms.Form):
+    nombreH = forms.CharField(max_length=40)

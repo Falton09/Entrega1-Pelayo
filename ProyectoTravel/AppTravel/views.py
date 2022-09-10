@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from AppTravel.forms import BusquedaUsuarios, CreacionUsuarios, NuevoVuelo, ReservaHotel
+from AppTravel.forms import BusquedaResevas, BusquedaUsuarios, BusquedaVuelos, CreacionUsuarios, NuevoVuelo, ReservaHotel
 from AppTravel.models import Hotel, Usuario, Vuelos
 
 #inicio de la pagina, va hacer un login para que la informacion se entrelace
@@ -66,14 +66,16 @@ def reserva_hotel(request):
 
     return render(request, 'AppTravel/reserva_hotel.html',contexto)
 
-# busqueda en progreso, no se porque no funciona...
+# busqueda, por ahora solo busca los usuaros. mas adelante ampliare
 def busqueda_post(request):
     email = request.GET.get('email')
 
-
     usuarios = Usuario.objects.filter(email__icontains=email)
+
+    
     contexto = {
         'usuarios': usuarios,
+        
     }
     return render(request, 'AppTravel/filtro.html', contexto)
 
